@@ -40,7 +40,7 @@ class ResolverDepth:
     def follow_ref(self) -> bool:
         """Should the resolver continue or return the reference."""
         if self.remaining_depth is None:
-            return True
+            return False
         return self.remaining_depth > 0
 
     def resolve_ref(self, url: str) -> Tuple[str, Any]:
